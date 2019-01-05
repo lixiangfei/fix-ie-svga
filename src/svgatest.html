@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #test{
+            width: 1485px;
+            height: 800px;
+        }
+    </style>
+</head>
+<body>
+    <div id="test"></div>
+    <script src="//s1.yy.com/ued_web_static/lib/jszip/3.1.4/??jszip.min.js,jszip-utils.min.js" charset="utf-8"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/svgaplayerweb@2.3.0/build/svga.min.js"></script> -->
+    <script src="./swfobject.js"></script>
+    <script src="./svga.ie.min.js"></script>
+      <script> 
+        var player = new SVGA.Player('#test');
+        var parser = new SVGA.Parser('#test'); // Must Provide same selector eg:#demoCanvas IF support IE6+
+        parser.load('test.svga', function(videoItem) {
+            player.setVideoItem(videoItem);
+            player.startAnimation();
+        });
+    </script>
+</body>
+</html>
